@@ -29,18 +29,6 @@ public class ExtendedHibernateJpaDialect extends HibernateJpaDialect {
 
     @Override
     protected DataAccessException convertHibernateAccessException(HibernateException ex) {
-       /* DataAccessException dataAccessException = super.convertHibernateAccessException(ex);
-        DataAccessException translatedEx = dataAccessException;
-        if(dataAccessException instanceof DataIntegrityViolationException){
-            if (dataAccessException.getCause() instanceof ConstraintViolationException) {
-                ConstraintViolationException constraintViolationException = (ConstraintViolationException) dataAccessException.getCause();
-                SQLException sqlEx = constraintViolationException.getSQLException();
-                translatedEx = sqlExceptionTranslator.translate(null, null, sqlEx);
-            }
-
-        }
-        return translatedEx;*/
-
         DataAccessException translatedEx = null;
             if (ex instanceof ConstraintViolationException) {
                 ConstraintViolationException constraintViolationException = (ConstraintViolationException)ex;
