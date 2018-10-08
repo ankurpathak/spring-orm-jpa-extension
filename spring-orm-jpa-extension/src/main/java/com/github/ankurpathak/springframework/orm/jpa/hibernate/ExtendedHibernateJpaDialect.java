@@ -6,8 +6,6 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.jdbc.support.SQLExceptionTranslator;
 import org.springframework.orm.jpa.vendor.HibernateJpaDialect;
-
-import javax.persistence.PersistenceException;
 import java.sql.SQLException;
 
 /**
