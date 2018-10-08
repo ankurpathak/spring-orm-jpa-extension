@@ -3,7 +3,6 @@ package com.github.ankurpathak.springframework.orm.jpa.hibernate;
 import org.hibernate.HibernateException;
 import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.dao.DataAccessException;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.jdbc.support.SQLExceptionTranslator;
 import org.springframework.orm.jpa.vendor.HibernateJpaDialect;
 import java.sql.SQLException;
@@ -14,16 +13,12 @@ import java.sql.SQLException;
 
 public class ExtendedHibernateJpaDialect extends HibernateJpaDialect {
 
-    private SQLExceptionTranslator sqlExceptionTranslator;
-
-    public void setSqlExceptionTranslator(SQLExceptionTranslator sqlExceptionTranslator) {
-        this.sqlExceptionTranslator = sqlExceptionTranslator;
-    }
-
+    private final SQLExceptionTranslator sqlExceptionTranslator;
 
     public ExtendedHibernateJpaDialect(SQLExceptionTranslator sqlExceptionTranslator) {
         this.sqlExceptionTranslator = sqlExceptionTranslator;
     }
+
 
     @Override
     protected DataAccessException convertHibernateAccessException(HibernateException ex) {

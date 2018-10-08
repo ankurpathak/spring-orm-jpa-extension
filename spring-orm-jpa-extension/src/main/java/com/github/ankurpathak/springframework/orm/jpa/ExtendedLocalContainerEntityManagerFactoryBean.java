@@ -13,13 +13,11 @@ import java.sql.SQLException;
  */
 public class ExtendedLocalContainerEntityManagerFactoryBean extends LocalContainerEntityManagerFactoryBean {
 
-    private SQLExceptionTranslator sqlExceptionTranslator;
+    private final SQLExceptionTranslator sqlExceptionTranslator;
 
-    public void setSqlExceptionTranslator(SQLExceptionTranslator sqlExceptionTranslator) {
+    public ExtendedLocalContainerEntityManagerFactoryBean(SQLExceptionTranslator sqlExceptionTranslator) {
         this.sqlExceptionTranslator = sqlExceptionTranslator;
     }
-
-
 
 
     @Override
