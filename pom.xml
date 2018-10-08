@@ -17,6 +17,40 @@
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
 
+    <name>${project.groupId}:${project.artifactId}</name>
+    <description>Extension to Spring ORM JPA module to provide Standard Spring
+        SQL Exception Translation similar to Spring JDBC module.</description>
+    <url>https://github.com/ankurpathak/spring-orm-jpa-extension</url>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+    <developers>
+        <developer>
+            <name>Ankur Pathak</name>
+            <email>ankurpathak@live.in</email>
+            <organization>com.github.ankurpathak</organization>
+            <organizationUrl>https://github.com/ankurpathak</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/ankurpathak/spring-orm-jpa-extension.git</connection>
+        <developerConnection>scm:git:ssh://github.com:/ankurpathak/spring-orm-jpa-extension.git</developerConnection>
+        <url>https://github.com/ankurpathak/spring-orm-jpa-extension/tree/master</url>
+    </scm>
 
 
     <modules>
